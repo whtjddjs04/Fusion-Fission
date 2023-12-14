@@ -65,7 +65,7 @@ black = (0, 0, 0)
 font_path = join(os.path.dirname(__file__), 'DungGeunMo.ttf')
 font = pygame.font.Font(font_path, 36)
 
-larger_font = pygame.font.Font(font_path, 48)
+larger_font = pygame.font.Font(font_path, 64)
 
 start_text = font.render("START", True, white)
 story_text = font.render("STORY", True, white)
@@ -80,10 +80,12 @@ quit_rect = quit_text.get_rect(center=(screen_width // 2, 600))
 stage1_text = font.render("STAGE 1", True, white)
 stage2_text = font.render("STAGE 2", True, white)
 stage3_text = font.render("STAGE 3", True, white)
+gameover_text = larger_font.render("GAME CLEAR!", True, black)
 
 stage1_rect = stage1_text.get_rect(center=(screen_width // 2, 250))
 stage2_rect = stage2_text.get_rect(center=(screen_width // 2, 350))
 stage3_rect = stage3_text.get_rect(center=(screen_width // 2, 450))
+gameover_rect = gameover_text.get_rect(center=(screen_width // 2, 250))
 
 sound_text = font.render("SOUND", True, white)
 fps_text = font.render("FPS", True, white)
