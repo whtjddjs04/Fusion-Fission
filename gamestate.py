@@ -384,14 +384,8 @@ class GameState:
 
         if get_item(self.player1, self.player2, self.apples, self.bananas, self.fruits) == 0:
             if not self.apples and not self.bananas:
-                self.state = "stage1"
-                self.level_loader()
+                self.state = "game_clear"
 
-                for apple in self.apples:
-                    self.fruits.add(apple)
-                for banana in self.bananas:
-                    banana.banana()
-                    self.fruits.add(banana)
     def game_clear(self):
         window.fill((255,255,255))
         window.blit(gameover_text, gameover_rect)
@@ -484,3 +478,6 @@ class GameState:
             self.stage2()
         if self.state == 'stage3':
             self.stage3()
+        if self.state == 'game_clear':
+            self.game_clear()
+
