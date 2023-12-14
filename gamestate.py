@@ -392,13 +392,6 @@ class GameState:
                 for banana in self.bananas:
                     banana.banana()
                     self.fruits.add(banana)
-    def game_clear(self):
-        window.fill((255,255,255))
-        window.blit(gameover_text, gameover_rect)
-        pygame.display.flip()
-        pygame.time.delay(3000)
-        pygame.quit()
-        sys.exit()
 
     def level_loader(self):
         if self.state == 'stage1':
